@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{%static 'css/market.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/and_css.css' %}">
+
+    <div class="plus">
+        <a href="{% url 'add_market' %}"><img src="/static/media/plus.png" alt="plus"></a>
+    </div>
+
+    <div class="under-market" style="margin-top: -36px">
+        {% for item in market %}
+            <div class="market-class">
+                <div class="button-market-class">
+                    <form action="{{ item.pk }}/" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="button-add" style="width: 90px">DELETE</button>
+                    </form>
+                </div>
+                <img src="/static/media/money.png" alt="count money" width="16">
+                <p class="text-item">{{ item.text }}</p>
+                <p class="price">{{ item.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

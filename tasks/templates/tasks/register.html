@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+<body>
+
+<div class="register-class">
+<h1>Register</h1>
+
+<div class="block-in-class">
+<form method="post">
+    {% csrf_token %}
+<!--    {{ form.as_p }}-->
+    {{ form.non_field.errors }}
+    <div class="username-class">
+        <label for="{{ form.username.id_for_label }}">Username: </label>
+        {{ form.username }}
+        {{ form.username.errors }}
+    </div>
+    
+    <div class="register-password1-div">
+        <label for="{{ form.password1.id_for_label }}">Password: </label>
+        {{ form.password1 }}
+        {{ form.password1.errors }}
+    </div>
+
+    <ul>
+        <li>Your password can’t be too similar to your other personal information.</li>
+        <li>Your password must contain at least 8 characters.</li>
+        <li>Your password must contain at least 8 characters.</li>
+        <li>Your password can’t be entirely numeric.</li>
+    </ul>
+    
+    <div>
+        <label for="{{ form.password2.id_for_label }}">Repeat password: </label>
+        {{ form.password2 }}
+        {{ form.password2.errors }}
+    </div>
+    
+    <button type="submit" class="register-button">Register</button>
+</form>
+<a href="{% url 'login' %}" class="register-log-in">log-in</a>
+    </div>
+    </div>
+
+</body>
+</html>

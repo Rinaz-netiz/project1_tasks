@@ -1,0 +1,74 @@
+.add-form {
+    margin-left: 35%;
+    margin-top: 15px;
+    padding: 8px;
+
+    font-size: 24px;
+    border-style: solid;
+    border-radius: 8px;
+    height: 160px;
+    width: 380px;
+    background-color: #ececec;
+    border-color: #b2b2b2;
+}
+
+.field-every {
+    margin-bottom: 5px;
+}
+
+.text-input {
+    margin-left: 5px;
+    padding-top: 12px;
+
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #9d9d9d;
+    background-color: #fafafa;
+    height: 28px;
+    width: 310px;
+    padding-bottom: 8px;
+}
+
+.date-class {
+    margin-left: 5px;
+    padding-top: 12px;
+
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #9d9d9d;
+    background-color: #fafafa;
+    height: 28px;
+    width: 215px;
+    padding-bottom: 8px;
+}
+
+.money-class {
+    margin-left: 5px;
+    padding-top: 12px;
+
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #9d9d9d;
+    background-color: #fafafa;
+    height: 28px;
+    width: 180px;
+    padding-bottom: 8px;
+}
+
+
+.button-add {
+    margin-left: 120px;
+    margin-top: 10px;
+
+    height: 45px;
+    width: 140px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #e1e1e1;
+    border-color: #949494;
+    font-size: 22px;
+}
+
+.button-add:hover {
+    background-color: #949494;
+}

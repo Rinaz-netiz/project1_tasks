@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <ul>
+        <li><a href="{% url 'home' %}">Welcome your tasks</a></li>
+        <li style="border-left: none; border-right: none"><a href="{% url 'market' %}">Market</a></li>
+        <li style="float: right; border-left: none"><text>{% now "jS F Y" %}</text></li>
+        <li style="float: right"><a href="{% url 'get_money' %}"><img src="/static/media/money.png" alt="count money">{{ money }}</a></li>
+    </ul>

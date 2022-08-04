@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'css/and_css.css' %}">
+
+
+    <div class="plus">
+        <a href="{% url 'add_task' %}"><img src="/static/media/plus.png" alt="plus"></a>
+    </div>
+
+    <div class="bin">
+        <a href="{% url 'delete_task' %}"><img src="/static/media/bin.png" alt="bin"></a>
+    </div>
+
+    <div class="under-task">
+        {% for item in tasks %}
+        <div class="task">
+            <p class="task-list">
+                <span class="p-money">
+                    <img src="/static/media/money.png" alt="count money" width="16">
+                    {{ item.money }}
+                </span>
+                <span style="padding-left: 4px" class="item-task">{{ item.task }}</span>
+                <span style="padding-left: 30%; font-size: 22px" class="item-date">{{ item.date_add|date:"m-d H:i" }}</span>
+            </p>
+
+            <div class="button-class">
+                <form action="{{ item.pk }}/" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="done">
+                </form>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

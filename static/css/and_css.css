@@ -1,0 +1,74 @@
+.under-task {
+    margin-top: -92px;
+}
+
+.task {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #777777;
+    background-color: #f1f1f1;
+    border-radius: 7px;
+
+    height: 33px;
+    margin-right: 10%;
+    margin-left: 58px;
+    margin-top: 8px;
+}
+
+.button-class {
+    margin-top: -48px;
+    margin-left: 91%
+}
+
+
+input {
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 5px;
+    border-color: #858585;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    background-color: #e5e5e5;
+}
+
+input:hover {
+    background-color: #858585;
+}
+
+.task-list {
+    margin-top: 1px;
+
+    padding-left: 15px;
+
+    display: block;
+    color: #2f2f2f;
+    text-decoration: none;
+    text-align: left;
+
+    font-style: italic;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.task p:hover {
+    margin-top: -1px;
+    padding-bottom: 7px;
+    color: black;
+    border-color: #282828;
+    background-color: #858585;
+    border-radius: 4px;
+}
+
+.bin img {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding: 1px;
+
+    border-style: solid;
+    border-color: #ababab;
+    background-color: #ececec;
+    border-radius: 7px;
+    width: 30px;
+
+}
+

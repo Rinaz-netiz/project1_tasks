@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/css-market.css' %}">
+
+
+<div class="add-market">
+    <form action="{% url 'add_market' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.non_field.errors }}
+        <div class="market-add-text">
+            <label for="{{ form.text.id_for_label }}">Product: </label>
+            {{ form.text }}
+            {{ form.text.errors }}
+        </div>
+        <div class="market-add-price">
+            <label for="{{ form.price.id_for_label }}">Price: </label>
+            {{ form.price }}
+            {{ form.price.errors }}
+        </div>
+        <div>
+            <button type="submit" class="button-add-market">Add product</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

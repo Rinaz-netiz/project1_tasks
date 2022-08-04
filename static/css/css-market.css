@@ -1,0 +1,58 @@
+.add-market {
+    margin-top: 15px;
+    margin-left: 30%;
+    padding: 8px;
+
+    font-size: 22px;
+    border-style: solid;
+    height: 130px;
+    width: 465px;
+    border-radius: 8px;
+    background-color: #dcdcdc;
+    border-color: #c2c2c2;
+}
+
+.market-add-text {
+    margin-bottom: 5px;
+}
+
+.market-add-text-input {
+    border-style: solid;
+    height: 30px;
+    width: 380px;
+    border-radius: 8px;
+    border-color: #777777;
+    background-color: #f1f1f1;
+}
+
+.market-add-price {
+    margin-bottom: 10px;
+}
+
+.market-add-price-input {
+    margin-left: 24px;
+
+    border-style: solid;
+    height: 30px;
+    width: 380px;
+    border-radius: 8px;
+    border-color: #777777;
+    background-color: #f1f1f1;
+}
+
+.button-add-market {
+    margin-left: 140px;
+
+    height: 50px;
+    width: 180px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    border-color: #a9a9a9;
+    font-size: 24px;
+}
+
+.button-add-market:hover {
+    background-color: #a9a9a9;
+
+}

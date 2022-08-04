@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/add_task.css' %}">-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_form.css' %}">
+
+<div class="add-form">
+    <form action="{% url 'add_task' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.non_field.errors }}
+        <div class="field-every">
+            <div class="text-class">
+                <label for="{{ form.task.id_for_label }}">Task: </label>
+                {{ form.task }}
+                <div>
+                    {{ form.task.errors }}
+                </div>
+            </div>
+        </div>
+
+        <div class="field-every">
+            <label for="{{ form.date_add.id_for_label }}">Date and Time: </label>
+            {{ form.date_add }}
+            <div>
+                {{ form.date_add.errors }}
+            </div>
+        </div>
+
+        <div class="field-every">
+            <label for="{{ form.money.id_for_label }}">How much money: </label>
+            {{ form.money }}
+            <div>
+                {{ form.money.errors }}
+            </div>
+        </div>
+        <div class="button-class">
+            <button type="submit" class="button-add">Add task</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

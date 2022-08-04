@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/brush.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/get_money.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'css/market.css' %}">
+
+<div class="button-get-money">
+    <form action="{% url 'get_money' %}" method="post">
+        {% csrf_token %}
+        <button type="submit"><img src="/static/media/brush.png" alt="brush"></button>
+    </form>
+</div>
+
+<div class="under-task" style="margin-top: -54px">
+    {% for item in tasks %}
+    <div class="task">
+        <p class="task-list" href="#">
+                <span class="p-money">
+                    <img src="/static/media/money.png" alt="count money" width="16">
+                    {{ item.money }}
+                </span>
+            <span style="padding-left: 4px" class="item-task">{{ item.task }}</span>
+            <span style="padding-left: 30%; font-size: 22px" class="item-date">{{ item.date_add|date:"m-d H:i" }}</span>
+        </p>
+    </div>
+    {% endfor %}
+    <div style="margin-top: 10px" class="market-div">
+        {% for item in market %}
+        <div class="market-class">
+            <img src="/static/media/money.png" alt="count money" width="16">
+            <p class="text-item" style="font-style: italic">{{ item.text }}</p>
+            <p class="price" style="font-style: italic">{{ item.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
